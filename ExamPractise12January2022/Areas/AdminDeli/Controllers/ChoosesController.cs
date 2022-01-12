@@ -45,7 +45,9 @@ namespace ExamPractise12January2022.Areas.AdminDeli.Controllers
         }
         public async Task<IActionResult> Delete(int? id)
         {
+            if (id == null) return NotFound();
             var choose= await _context.WhyChooses.FindAsync(id);
+            if (choose==null) return NotFound();
             choose.IsDeleted = true;
             await _context.SaveChangesAsync();
             return RedirectToAction("Index", "Chooses");
@@ -53,13 +55,19 @@ namespace ExamPractise12January2022.Areas.AdminDeli.Controllers
         
         public async Task<IActionResult> Update(int? id)
         {
+            if (id == null) return NotFound();
             var choose = await _context.WhyChooses.FindAsync(id);
+            if (choose == null) return NotFound();
+
+
             return View(choose);
         }
         [HttpPost]
         public async Task<IActionResult> Update(WhyChoose whyChoose,int? id)
         {
+            if (id == null) return NotFound();
             var choose = await _context.WhyChooses.FindAsync(id);
+            if (choose == null) return NotFound();
             choose.Title = whyChoose.Title;
             choose.Content = whyChoose.Content;
             await _context.SaveChangesAsync();

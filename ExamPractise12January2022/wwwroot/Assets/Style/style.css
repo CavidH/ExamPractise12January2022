@@ -1,0 +1,279 @@
+    @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+    /* navbar start */
+    
+    .nav-link {
+        color: white;
+    }
+    
+    .nav-link:hover {
+        color: #ffaf38;
+    }
+    
+    .fa-clock {
+        color: #ffaf38;
+    }
+    
+    .fa-mobile-alt {
+        color: #ffaf38;
+    }
+    
+    .phone {
+        color: white;
+    }
+    
+    .oclock {
+        color: white;
+    }
+    
+    .navbar-brand {
+        color: white;
+        font-family: initial;
+        font-size: 25px;
+    }
+    
+    .navbar-brand:hover {
+        color: white;
+    }
+    
+    .btn-navbar {
+        color: white !important;
+        background-color: #ffaf38;
+        border-radius: 15px;
+    }
+    /* navbar end */
+    /* slider :start */
+    
+    .carousel-caption {
+        margin-bottom: 650px;
+    }
+    
+    .carousel-caption h2 {
+        margin: 0;
+        color: #fff;
+        padding-bottom: 60px;
+        font-size: 52px;
+        font-weight: 700;
+        font-family: 'Satisfy';
+    }
+    
+    .carousel-caption span {
+        color: #ee9510;
+    }
+    
+    .carousel-caption p {
+        font-family: sans-serif;
+        font-size: 16px;
+        color: #fff;
+    }
+    
+    .carousel-btn {
+        font-weight: 400;
+        font-size: 18px;
+        letter-spacing: 1px;
+        font-family: sans-serif;
+        margin: 10px;
+        padding: 12px 30px;
+        border: 1px solid;
+        /* background-color: violet; */
+        border-radius: 50px;
+        color: #fff;
+        border: 2px solid #ffb03b;
+    }
+    
+    .carousel-item img {
+        /* opacity: 0.85; */
+    }
+    /* slider :end */
+    /* video about :start */
+    
+    .VideoAbout {
+        background-color: #FFFAF3;
+    }
+    
+    .text h3 {
+        font-family: 'Satisfy';
+        color: #5f5950;
+        font-weight: 400;
+        font-size: 34px;
+    }
+    
+    .text p {
+        font-size: 15px;
+        color: #848484;
+    }
+    
+    .text {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    
+    .i {
+        font-style: italic;
+    }
+    
+    .aboutul {
+        margin-left: -40px;
+        margin-top: 20px;
+        list-style: none;
+    }
+    
+    .aboutul li {
+        font-size: 16px;
+        color: #444444;
+    }
+    
+    .fa-check-double {
+        font-size: 20px;
+        color: #ffb03b;
+    }
+    /* video about :end */
+    /* Our section :start */
+    
+    .Our-title {
+        text-align: center;
+    }
+    
+    .Our-title h2 {
+        font-family: Satisfy;
+        font-size: 32px;
+        font-weight: 700;
+        color: #5f5950;
+    }
+    
+    .Our-title span {
+        color: #ffb03b;
+    }
+    
+    .Our-title p {
+        text-align: center;
+        font-size: 16px;
+        color: #444444;
+    }
+    
+    .our {
+        padding: 50px 30px;
+        box-shadow: 0px 2px 15px rgb(0 0 0 / 10%);
+        height: 100%;
+    }
+    
+    .our:hover {
+        background-color: #ffb03b;
+    }
+    
+    .our span {
+        color: #ffcf88;
+        font-size: 28px;
+        font-weight: 700;
+    }
+    
+    .our h4 {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        color: #6c665c;
+        font-family: Satisfy;
+        font-size: 24px;
+        font-weight: 600;
+    }
+    
+    .our p {
+        font-size: 15px;
+        color: #aaa;
+    }
+    
+    .our:hover p {
+        color: #fff;
+    }
+    
+    .our:hover h4 {
+        color: #fff;
+    }
+    
+    .our:hover span {
+        color: #fff;
+    }
+    /* Our section :end */
+    /*chef section :start */
+    
+    .footer-content {}
+    /*chef section :end */
+    /* photos section :start */
+    
+    .photo-box:hover {
+        transform: scale(1.1);
+        transition: 0.3s all;
+        overflow: hidden;
+    }
+    
+    .photo-box {
+        overflow: hidden;
+    }
+    
+    .photos-title {
+        text-align: center;
+    }
+    
+    .photos-title h2 {
+        text-align: center;
+        font-family: Satisfy;
+        font-size: 32px;
+        font-weight: bold;
+        color: #5f5950;
+    }
+    
+    .photos-title span {
+        color: #ffb03b;
+    }
+    
+    .photos-title p {
+        font-size: 16px;
+        color: #444444;
+    }
+    
+    .row-photo {
+        padding-top: 10px;
+    }
+    
+    .photo-box {
+        margin-bottom: 6px;
+    }
+    
+    #footer {
+        padding: 40px 0;
+        background-color: #35322D;
+        text-align: center;
+    }
+    
+    .footer-content h3 {
+        font-size: 36px;
+        font-family: Satisfy;
+        font-weight: 700;
+        color: #ffb03b;
+    }
+    
+    .footer-content p {
+        font-size: 18px;
+        color: #fff;
+    }
+    
+    .socials i {
+        color: #fff;
+        font-size: 19px;
+        padding: 8px 8px;
+        border-radius: 50%;
+        margin: 0 4px 0 0;
+        background-color: #46423B;
+    }
+    
+    .socials i:hover {
+        background-color: #ffb03b;
+    }
+    
+    .resev p {
+        font-size: 16px;
+        color: #fff;
+    }
+    
+    .resev span {
+        font-weight: bold;
+    }
+    /* photos section :end */

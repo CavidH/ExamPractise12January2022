@@ -1,13 +1,14 @@
 ﻿using ExamPractise12January2022.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace ExamPractise12January2022.DAL
 {
-    public class AppDbContext:DbContext
+    public class AppDbContext:IdentityDbContext<User>
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
-
+    
         }
 
 

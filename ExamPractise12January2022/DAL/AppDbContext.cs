@@ -12,5 +12,6 @@ namespace ExamPractise12January2022.DAL
 
 
         public DbSet<WhyChoose> WhyChooses { get; set; }
+        public DbSet<GaleryImage> GaleryImages { get; set; }
     }
 }

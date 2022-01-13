@@ -16,9 +16,18 @@ namespace ExamPractise12January2022.Controllers
         }
         public async Task<IActionResult> Index()
         {
-            var chooses = await _context.WhyChooses.Where(p => p.IsDeleted == false).ToListAsync();
+            var chooses = await _context
+                .WhyChooses
+                .Where(p => p.IsDeleted == false)
+                .ToListAsync();
+            var ImageGalery = await _context
+                .GaleryImages
+                .Where(p => p.IsDeleted == false)
+                .Take(8)
+                .ToListAsync();
             HomeVM homeVm = new HomeVM
             {
+                GaleryImages = ImageGalery,
                 WhyChooses = chooses
             };
             return View(homeVm);

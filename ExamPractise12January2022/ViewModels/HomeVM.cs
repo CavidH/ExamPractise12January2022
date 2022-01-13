@@ -9,5 +9,8 @@ namespace ExamPractise12January2022.ViewModels
     public class HomeVM
     {
         public List<WhyChoose> WhyChooses { get; set; }
+        public List<GaleryImage> GaleryImages { get; set; }
+
+
     }
 }

@@ -1,5 +1,73 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿@model GaleryVM
+<div class="content-page">
+    <div class="content">
+
+        <!-- Start Content-->
+        <div class="container-fluid">
+
+            <!-- start page title -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="page-title-box">
+                        <h4 class="page-title">Add Why Choos</h4>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- end page title -->
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="header-title mb-4">Form</h4>
+
+
+                            <form class="parsley-examples" method="post" enctype="multipart/form-data">
+                                <div class="form-group">
+                              
+                                    <label asp-for="File">
+                                        Image File<span class="text-danger">*</span>
+                                    </label>
+                                    <span class="alert-danger" asp-validation-for="File"></span>
+                                    <input asp-for="File" parsley-trigger="change" required class="form-control">
+                                </div>
+                                <div class="form-group text-right mb-0">
+                                    <button class="btn btn-primary waves-effect waves-light mr-1" type="submit">
+                                        Submit
+                                    </button>
+                                    <button type="reset" class="btn btn-secondary waves-effect waves-light">
+                                        Cancel
+                                    </button>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                    <!-- end card -->
+                </div>
+                <!-- end col -->
+
+
+            </div>
+            <!-- end row -->
+
+
+        </div>
+        <!-- end container-fluid -->
+
+    </div>
+    <!-- end content -->
+    <!-- Footer Start -->
+    <footer class="footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    2015 - 2021 &copy; Velonic theme by <a href="#">Coderthemes</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- end Footer -->
+
+</div>

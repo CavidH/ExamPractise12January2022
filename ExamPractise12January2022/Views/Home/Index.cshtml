@@ -128,69 +128,18 @@
 
             <div class="row row-photo mt-4">
 
-                <div class="col-lg-3  photo-box">
-                    <div class=" photo   ">
-                        <a href="~/assets/img/gallery-1.jpg">
-                            <img src="~/Assets/Img/gallery-1.jpg" class="img-fluid">
-                        </a>
-                    </div>
-                </div>
+               @foreach (var image in Model.GaleryImages)
+               {
+                   <div class="col-lg-3  photo-box">
+                       <div class=" photo   ">
+                           <a href="~/assets/img/@image.ImageName">
+                               <img src="~/Assets/Img/@image.ImageName" class="img-fluid">
+                           </a>
+                       </div>
+                   </div>
+               }
 
-                <div class="col-lg-3  photo-box">
-                    <div class=" photo   ">
-                        <a href="~/assets/img/gallery-2.jpg">
-                            <img src="~/Assets/Img/gallery-2.jpg" class="img-fluid">
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-3  photo-box">
-                    <div class=" photo   ">
-                        <a href="~/assets/img/gallery-3.jpg">
-                            <img src="~/Assets/Img/gallery-3.jpg" class="img-fluid">
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-3  photo-box">
-                    <div class=" photo   ">
-                        <a href="~/assets/img/gallery-4.jpg">
-                            <img src="~/Assets/Img/gallery-4.jpg" class="img-fluid">
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-3  photo-box">
-                    <div class=" photo   ">
-                        <a href="~/assets/img/gallery-5.jpg">
-                            <img src="~/Assets/Img/gallery-5.jpg" class="img-fluid">
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-3  photo-box">
-                    <div class=" photo   ">
-                        <a href="~/assets/img/gallery-6.jpg">
-                            <img src="~/Assets/Img/gallery-6.jpg" class="img-fluid">
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-3  photo-box">
-                    <div class=" photo   ">
-                        <a href="~/assets/img/gallery-7.jpg">
-                            <img src="~/Assets/Img/gallery-7.jpg" class="img-fluid">
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-3  photo-box">
-                    <div class=" photo   ">
-                        <a href="~/assets/img/gallery-8.jpg">
-                            <img src="~/Assets/Img/gallery-8.jpg" class="img-fluid">
-                        </a>
-                    </div>
-                </div>
+             
 
             </div>
 

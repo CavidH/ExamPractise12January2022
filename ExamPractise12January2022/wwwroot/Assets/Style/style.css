@@ -27,7 +27,7 @@
     
     .navbar-brand {
         color: white;
-        font-family: initial;
+        font-family: 'Satisfy';
         font-size: 25px;
     }
     
@@ -277,3 +277,58 @@
         font-weight: bold;
     }
     /* photos section :end */
+
+    /* start chef */
+
+    .chef-title {
+        text-align: center;
+    }
+
+    .chef-title h2 {
+        color: #5f5950;
+        font-family: Satisfy;
+        font-size: 32px;
+        font-weight: 700;
+    }
+
+    .chef-title span {
+        color: #ffb03b
+    }
+
+    .chef-title p {
+        font-size: 16px;
+        color: #444444;
+        margin: 15px 320px 25px;
+    }
+
+    .chefs-info {
+        text-align: center;
+        padding: 20px 0;
+        background-color: #ffffff;
+    }
+
+    .chefs-info h4 {
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        font-size: 16px;
+        color: #6c665c;
+    }
+
+    .chefs-info span {
+        font-size: 13px;
+    }
+
+    .social i {
+        color: #7A7368;
+    }
+
+    .social {
+        margin-top: 10px;
+    }
+
+    #chefs {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        background-color: #f1e7d9;
+    }
+    /* end */

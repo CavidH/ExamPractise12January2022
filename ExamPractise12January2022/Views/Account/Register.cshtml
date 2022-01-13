@@ -36,18 +36,19 @@
                             <h5 class="text-white font-13 mb-0">Create a new Account</h5>
                         </div>
                         <div class="card-body">
-                            <form  class="p-2" method="post">
+                            <form class="p-2" method="post">
+                                <span class="alert-danger" ></span>
                                 <div class="form-group mb-3">
                                     <label asp-for="Name">Name :</label>
-                                    <input  asp-for="Name" class="form-control"   required=""  >
+                                    <input asp-for="Name" class="form-control" required="">
                                 </div>
                                 <div class="form-group mb-3">
                                     <label asp-for="SurName">SurName :</label>
-                                    <input  asp-for="SurName" class="form-control"  id="username" required=""  >
+                                    <input asp-for="SurName" class="form-control" id="username" required="">
                                 </div>
                                 <div class="form-group mb-3">
                                     <label asp-for="Email">Email :</label>
-                                    <input asp-for="Email" class="form-control"   required="" placeholder="john@deo.com">
+                                    <input asp-for="Email" class="form-control" required="" placeholder="john@deo.com">
                                 </div>
                                 <div class="form-group mb-3">
                                     <label asp-for="Password">Password :</label>

@@ -33,31 +33,29 @@ namespace ExamPractise12January2022.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Register(RegisterVM model)
         {
-            if (!ModelState.IsValid)
+
+
+            if (ModelState.IsValid)
             {
-                //sdfsdfsd
+                var user = new User
+                {
+                    Name = model.Name,
+                    SurName = model.SurName,
+                    UserName = model.Email,
+                    Email = model.Email
+                };
+                var result = await _userManager.CreateAsync(user, model.Password);
+
+                if (result.Succeeded)
+                {
+                    await _signInManager.SignInAsync(user, isPersistent: false);
+                    return RedirectToAction("Index", "Home");
+                }
+                foreach (var error in result.Errors)
+                {
+                    ModelState.AddModelError("", error.Description);
+                }
             }
-            
-
-            //if (ModelState.IsValid)
-            //{
-            //    var user1 = new IdentityUser
-            //    {
-            //        UserName = model.Email,
-            //        Email = model.Email
-            //    };
-            //    var result = await _userManager.CreateAsync(user1, model.Password);
-
-            //    if (result.Succeeded)
-            //    {
-            //        await _signInManager.SignInAsync(user1, isPersistent: false);
-            //        return RedirectToAction("Index", "Home");
-            //    }
-            //    foreach (var error in result.Errors)
-            //    {
-            //        ModelState.AddModelError("", error.Description);
-            //    }
-            //}
             return View();
         }
     }

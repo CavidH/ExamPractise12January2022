@@ -35,16 +35,25 @@ namespace ExamPractise12January2022.Areas.AdminDeli.Controllers
             return View(galeryImages);
         }
 
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
+            var galeryImages = await _context
+                .GaleryImages
+                .Where(p => p.IsDeleted == false)
+                .ToListAsync();
+            if (galeryImages.Count>=8)
+            {
+                TempData["alert"] = "galerye 8 imageden chox elave etmek olmaz";
+               return  RedirectToAction("Index","Galery");
+            }
+
             return View();
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(GaleryVM galeryVm)
-        { 
-            
+        {
             if (!ModelState.IsValid)
             {
                 return View(galeryVm);

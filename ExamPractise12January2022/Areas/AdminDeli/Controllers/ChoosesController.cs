@@ -23,8 +23,18 @@ namespace ExamPractise12January2022.Areas.AdminDeli.Controllers
 
             return View(chooses);
         }
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
+            int maxcountchoose = 3; //setting
+            var galeryImages = await _context
+                .WhyChooses
+                .Where(p => p.IsDeleted == false)
+                .ToListAsync();
+            if (galeryImages.Count>=maxcountchoose)
+            {
+                TempData["alert"] = $"  {maxcountchoose}den chox elave etmek olmaz";
+                return  RedirectToAction("Index","Chooses");
+            }
             return View();
         }
 

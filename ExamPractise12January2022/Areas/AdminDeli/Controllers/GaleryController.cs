@@ -37,13 +37,14 @@ namespace ExamPractise12January2022.Areas.AdminDeli.Controllers
 
         public async Task<IActionResult> Create()
         {
+            int maxImageCount = 8;//setting
             var galeryImages = await _context
                 .GaleryImages
                 .Where(p => p.IsDeleted == false)
                 .ToListAsync();
-            if (galeryImages.Count>=8)
+            if (galeryImages.Count>=maxImageCount)
             {
-                TempData["alert"] = "galerye 8 imageden chox elave etmek olmaz";
+                TempData["alert"] = $"galerye {maxImageCount} imageden chox elave etmek olmaz";
                return  RedirectToAction("Index","Galery");
             }
 

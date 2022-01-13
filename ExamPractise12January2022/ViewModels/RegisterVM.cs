@@ -4,6 +4,10 @@ namespace ExamPractise12January2022.ViewModels
 {
     public class RegisterVM
     {
+        [Required]
+        public string SurName { get; set; }
+        [Required]
+        public string Name { get; set; }
 
         [Required]
         [EmailAddress]

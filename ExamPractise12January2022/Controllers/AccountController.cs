@@ -29,29 +29,36 @@ namespace ExamPractise12January2022.Controllers
         {
             return View();
         }
-        //[HttpPost]  
-        //public async Task<IActionResult> Register(RegisterVM model)  
-        //{  
-        //    if (ModelState.IsValid)  
-        //    {  
-        //        var user = new IdentityUser   
-        //        {   
-        //            UserName=model.Email,  
-        //            Email=model.Email  
-        //        };  
-        //        var result = await _userManager.CreateAsync(user, model.Password);  
-  
-        //        if (result.Succeeded)  
-        //        {  
-        //            await _signInManager.SignInAsync(user, isPersistent: false);  
-        //            return RedirectToAction("Index", "Home");  
-        //        }  
-        //        foreach (var error in result.Errors)  
-        //        {  
-        //            ModelState.AddModelError("",error.Description);  
-        //        }  
-        //    }  
-        //    return View();  
-        //} 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Register(RegisterVM model)
+        {
+            if (!ModelState.IsValid)
+            {
+                //sdfsdfsd
+            }
+            
+
+            //if (ModelState.IsValid)
+            //{
+            //    var user1 = new IdentityUser
+            //    {
+            //        UserName = model.Email,
+            //        Email = model.Email
+            //    };
+            //    var result = await _userManager.CreateAsync(user1, model.Password);
+
+            //    if (result.Succeeded)
+            //    {
+            //        await _signInManager.SignInAsync(user1, isPersistent: false);
+            //        return RedirectToAction("Index", "Home");
+            //    }
+            //    foreach (var error in result.Errors)
+            //    {
+            //        ModelState.AddModelError("", error.Description);
+            //    }
+            //}
+            return View();
+        }
     }
 }
